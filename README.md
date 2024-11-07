@@ -8,3 +8,5 @@ To run it, open a terminal and navigate to the head directory then run KMs_Fan_C
 I am still very new to the using C# for anything other than Unity Game Engine so there are likely many optimizations that can be made. I also have no clue how to save the fan curve for future use, I will keep working on it. Sudgestions are always welcome.
 
 Have a great day!
+
+Known Issues: inputing a temp of 0 C can break everything!
