@@ -60,25 +60,31 @@ namespace King_Minors_Fan_Curve {
                     pointAboveTemp = point;
                 }
             }
+            Console.WriteLine($"Point Below: Temp={pointBelowTemp.GetTemp()}, Speed={pointBelowTemp.GetSpeedPercentage()}");
+            Console.WriteLine($"Point Above: Temp={pointAboveTemp.GetTemp()}, Speed={pointAboveTemp.GetSpeedPercentage()}");
         }
 
-        private int CalculateSlope () {
-            int rise = pointAboveTemp.GetSpeedPercentage() - pointBelowTemp.GetSpeedPercentage();
-            int run = pointAboveTemp.GetTemp() - pointBelowTemp.GetTemp();
+        private double CalculateSlope () {
+            double rise = pointAboveTemp.GetSpeedPercentage() - pointBelowTemp.GetSpeedPercentage();
+            double run = pointAboveTemp.GetTemp() - pointBelowTemp.GetTemp();
+            if (run == 0) {
+                return 100;
+            }
             return rise / run;
         }
 
-        private int CalculateYIntercept () {
-            int yIntercept = pointBelowTemp.GetSpeedPercentage() - CalculateSlope() * pointBelowTemp.GetTemp();
+        private double CalculateYIntercept () {
+            double yIntercept = pointBelowTemp.GetSpeedPercentage() - CalculateSlope() * pointBelowTemp.GetTemp();
             return yIntercept;
         }
 
         public int CalculateFanSpeed(int temp) {
             GetPointBelowAndAbove(temp);
-            int slope = CalculateSlope();
-            int yIntercept = CalculateYIntercept();
+            double slope = CalculateSlope();
+            double yIntercept = CalculateYIntercept();
 
-            whatSpeedShouldISet = slope * temp + yIntercept;
+            whatSpeedShouldISet = (int)Math.Floor(slope * temp + yIntercept);
+            Console.WriteLine($"Slope={slope}, Temp={temp}, Y-Intercept={yIntercept}");
             return whatSpeedShouldISet;
         }
 
