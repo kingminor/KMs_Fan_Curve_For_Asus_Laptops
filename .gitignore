@@ -1,6 +1,7 @@
 # Ignore build output directories
 bin/
 obj/
+publish/
 
 # User-specific files
 *.user
