@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KMs_Fan_Curve_For_Asus_Laptops")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+166f175e8a2333a8516e9c2ecaf7e115449f3bbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+808222f25255f2f2d4a2c08fdee7af6cfed7d3b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("KMs_Fan_Curve_For_Asus_Laptops")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KMs_Fan_Curve_For_Asus_Laptops")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
