@@ -60,8 +60,6 @@ namespace King_Minors_Fan_Curve {
                     pointAboveTemp = point;
                 }
             }
-            Console.WriteLine($"Point Below: Temp={pointBelowTemp.GetTemp()}, Speed={pointBelowTemp.GetSpeedPercentage()}");
-            Console.WriteLine($"Point Above: Temp={pointAboveTemp.GetTemp()}, Speed={pointAboveTemp.GetSpeedPercentage()}");
         }
 
         private double CalculateSlope () {
@@ -84,7 +82,6 @@ namespace King_Minors_Fan_Curve {
             double yIntercept = CalculateYIntercept();
 
             whatSpeedShouldISet = (int)Math.Floor(slope * temp + yIntercept);
-            Console.WriteLine($"Slope={slope}, Temp={temp}, Y-Intercept={yIntercept}");
             return whatSpeedShouldISet;
         }
 
